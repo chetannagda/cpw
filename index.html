@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorPW - Professional Lightroom Presets & LUTs</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <span>ADD 4 TO CART PAY FOR 2 ONLY-USE CODE -COLORPW04</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">ColorPW</a></h1>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="collections.html" onclick="closeMobileMenu()">Collections</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="https://www.amberpresets.com/cdn/shop/files/Copy_of_Add_a_heading_6.jpg?v=1753552417&width=1100"
+                    alt="Wedding Presets">
+            </div>
+            <div class="hero-slide">
+                <img src="https://www.alfaazphotography.com/wp-content/uploads/2020/03/W_Dilpreet_Mandip-0194.jpg"
+                    alt="Cinematic Presets">
+            </div>
+            <div class="hero-slide">
+                <img src="https://sidphoto.in/wp-content/uploads/2024/07/blog-common-muslim-wedding-photography-shots-heroimage.webp"
+                    alt="Portrait Presets">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Professional Lightroom Presets</h1>
+            <p>Transform your photos with one click magic</p>
+            <a href="collections.html" class="cta-button">Explore Collections</a>
+        </div>
+        <div class="hero-nav">
+            <button class="hero-nav-btn prev" onclick="prevHeroSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn next" onclick="nextHeroSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Scrolling Banner -->
+    <div class="scrolling-banner">
+        <div class="banner-text">
+            🎉 FLASH SALE: Use code COLORPW04 for BUY 4 PAY FOR 2 - Limited Time Offer! 🎉
+        </div>
+    </div>
+
+    <!-- One Click Magic Section -->
+    <section class="one-click-magic">
+        <div class="container">
+            <h2>One Click Magic</h2>
+            <p>Transform your photos instantly with our professionally crafted presets</p>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="openProduct(1)" data-product-id="1" data-category="wedding">
+                    <div class="product-image">
+                        <img src="./images/WED.jpg" alt="Premium Indian Wedding Lightroom Presets & LUTs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Wedding Lightroom Luts</h3>
+                        <div class="price">
+                            <span class="sale-price">Rs. 199.00</span>
+                            <span class="regular-price">Rs. 999.00</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(1)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button class="buy-now-btn" onclick="event.stopPropagation(); buyNow(1)">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProduct(2)" data-product-id="2" data-category="prewedding">
+                    <div class="product-image">
+                        <img src="./images/pre.jpg" alt="100 Pre Wedding Lightroom Presets">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium PreWedding Lightroom Luts</h3>
+                                <div class="price">
+                                    <span class="sale-price">Rs. 199.00</span>
+                                    <span class="regular-price">Rs. 999.00</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(2)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <button class="buy-now-btn" onclick="event.stopPropagation(); buyNow(2)">
+                                        Buy Now
+                                    </button>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProduct(3)" data-product-id="3" data-category="cinematic">
+                    <div class="product-image">
+                        <img src="./images/wen.jpg" alt="Bright & Airy Video LUTs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Camera Raw Luts</h3>
+                        <div class="price">
+                            <span class="sale-price">Rs. 199.00</span>
+                            <span class="regular-price">Rs. 499.00</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(3)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button class="buy-now-btn" onclick="event.stopPropagation(); buyNow(3)">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProduct(4)" data-product-id="4" data-category="wedding">
+                    <div class="product-image">
+                        <img src="./images/prowed.jpg" alt="100 Wedding Lightroom Presets">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premier Pro Wedding Luts</h3>
+                        <div class="price">
+                            <span class="sale-price">Rs. 199.00</span>
+                            <span class="regular-price">Rs. 999.00</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(4)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button class="buy-now-btn" onclick="event.stopPropagation(); buyNow(4)">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProduct(5)" data-product-id="5" data-category="prewedding">
+                    <div class="product-image">
+                        <img src="./images/pro.jpg" alt="Premier Pro PreWedding Luts">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premier Pro PreWedding Luts</h3>
+                        <div class="price">
+                            <span class="sale-price">Rs. 199.00</span>
+                            <span class="regular-price">Rs. 999.00</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(5)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button class="buy-now-btn" onclick="event.stopPropagation(); buyNow(5)">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About ColorPW</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ColorPW is your premier destination for professional Lightroom presets and LUTs. We specialize in
+                        creating high-quality, professionally crafted presets that transform your photos with just one
+                        click.</p>
+                    <p>Our presets are designed by experienced photographers and color graders who understand the
+                        nuances of different photography styles, from wedding photography to cinematic video work.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-magic"></i>
+                        <h3>One-Click Magic</h3>
+                        <p>Transform your photos instantly</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Compatible</h3>
+                        <p>Works on all devices and platforms</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-download"></i>
+                        <h3>Instant Download</h3>
+                        <p>Get your presets immediately</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@colorpw.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91 6367426746</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Support Hours</h3>
+                        <p>24/7 Customer Support</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="submitContactForm(event)">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content desktop-footer">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>ColorPW</h3>
+                        <p>Professional Lightroom presets and LUTs for photographers and content creators.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="collections.html?category=wedding">Wedding</a></li>
+                        <li><a href="collections.html?category=cinematic">Cinematic</a></li>
+                        <li><a href="collections.html?category=prewedding">Pre-Wedding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Footer -->
+            <div class="footer-content mobile-footer">
+                <div class="mobile-footer-top">
+                    <div class="footer-logo">
+                        <h3>ColorPW</h3>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="mobile-footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ColorPW. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916367426746?text=Hi" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: Rs. <span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <script src="./main.js"></script>
+    <script src="./cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - ColorPW</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <span>ADD 4 TO CART PAY FOR 2 ONLY-USE CODE -COLORPW04</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">ColorPW</a></h1>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="collections.html" onclick="closeMobileMenu()">Collections</a></li>
+                <li><a href="index.html#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-wrapper">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="images/pexel.jpg"
+                            alt="Product Image">
+                        <div class="image-controls">
+                            <button class="prev-btn" onclick="prevImage()" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="next-btn" onclick="nextImage()" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="zoom-overlay" onclick="toggleZoom()">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <!-- Thumbnails will be dynamically generated here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="brand">ColorPW</div>
+                    <h1 class="product-title">Loading...</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(124 reviews)</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="sale-price">Rs 0.00</span>
+                        <span class="regular-price">Rs. 0.00</span>
+                        <span class="sale-badge">Sale</span>
+                    </div>
+                    <div class="shipping-info">
+                        <p><i class="fas fa-truck"></i> Instant Digital Download</p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" onclick="addToCartFromProduct()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to cart
+                        </button>
+                        <button class="buy-now-btn" onclick="buyNowFromProduct()">
+                            Buy it now
+                        </button>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>Descriptions</h3>
+                        <p><strong>ADD 4 TO CART PAY FOR 2 ONLY-USE CODE -COLORPW04</strong></p>
+                        <p>Enhance your photos with our professionally crafted Lightroom presets and LUTs. These presets
+                            will bring out the vibrant colors, intricate details, and create stunning results with just
+                            one click.</p>
+
+                        <h4>What's Included?</h4>
+                        <ul class="included-list">
+                            <li>✔️ Mobile Lightroom Presets (DNG files)</li>
+                            <li>✔️ Desktop Lightroom Presets (XMP files)</li>
+                            <li>✔️ LUTs(.cube)</li>
+                            <li>✔️ PDF Guide With Video Instructions</li>
+                        </ul>
+
+                        <h4>Compatibility:</h4>
+                        <ul class="compatibility-list">
+                            <li>✔️ iOS iPhone, Mac, iPad</li>
+                            <li>✔️ Android</li>
+                            <li>✔️ Lightroom Desktop CC</li>
+                            <li>✔️ Free Lightroom Mobile App</li>
+                            <li>✔️ All versions of Lightroom</li>
+                            <li>✔️ All video Editing software</li>
+                            <li>✔️ .JPG and .RAW</li>
+                        </ul>
+
+                        <h4>PERFECT FOR:</h4>
+                        <ul class="perfect-for-list">
+                            <li>✔️ Wedding Photography</li>
+                            <li>✔️ Portrait Photography</li>
+                            <li>✔️ Instagram Content</li>
+                            <li>✔️ Professional Photography</li>
+                        </ul>
+                    </div>
+
+                    <div class="return-policy">
+                        <h3>Return Policy</h3>
+                        <p>All Lightroom presets sold on this website are <strong>digital downloads</strong> and
+                            therefore <strong>non-refundable</strong>. Once a preset pack has been downloaded, we are
+                            unable to offer returns, exchanges, or refunds.</p>
+                    </div>
+
+                    <div class="product-views">
+                        <p><strong>Product View Counter</strong></p>
+                        <p>During the last 24 hours, this product has been viewed <strong id="viewCount">924</strong>
+                            times.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>TESTIMONIALS</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I've used many presets, but these are a game-changer. They work beautifully with different skin
+                        tones and lighting conditions."</p>
+                    <div class="testimonial-author">
+                        <strong>Ritika S. (Photographer, Delhi)</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"We used these presets for our wedding photos. The results were stunning — even our photographer
+                        was impressed!"</p>
+                    <div class="testimonial-author">
+                        <strong>Tanvi & Raghav</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"These presets brought every detail to life! The richness in tones felt like a professional
+                        film."</p>
+                    <div class="testimonial-author">
+                        <strong>Abhishek Prajapati</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>You may also like</h2>
+            <div class="products-grid" id="relatedProducts">
+                <!-- Related products will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content desktop-footer">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>ColorPW</h3>
+                        <p>Professional Lightroom presets and LUTs for photographers and content creators.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="collections.html?category=wedding">Wedding</a></li>
+                        <li><a href="collections.html?category=cinematic">Cinematic</a></li>
+                        <li><a href="collections.html?category=instagram">Instagram</a></li>
+                        <li><a href="collections.html?category=portrait">Portrait</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Footer -->
+            <div class="footer-content mobile-footer">
+                <div class="mobile-footer-top">
+                    <div class="footer-logo">
+                        <h3>ColorPW</h3>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="mobile-footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ColorPW. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916367426746?text=Hi" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Image Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal">
+        <div class="zoom-content">
+            <img id="zoomedImage" src="" alt="Zoomed Product Image">
+            <button class="close-zoom" onclick="closeZoom()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: Rs. <span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <script src="./main.js"></script>
+    <script src="./product.js"></script>
+    <script src="./cart.js"></script>
+</body>
+
+</html>
